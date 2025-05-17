@@ -1,0 +1,2 @@
+# Fandy-Rival
+tugas python
