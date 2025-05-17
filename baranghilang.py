@@ -46,21 +46,19 @@ class SistemMonitoring:
         self.entry_petugas = tk.Entry(frame_form, width=40)
         self.entry_petugas.grid(row=3, column=1, padx=5, pady=5)
 
-        self.btn_lapor = tk.Button(self.root, text="Lapor Barang Hilang", command=self.lapor_barang,
-                                   bg="#007acc", fg="white", font=("Helvetica", 11), padx=10, pady=5)
+        self.btn_lapor = tk.Button(self.root, text="Lapor Barang Hilang", command=self.lapor_barang, bg="#007acc", fg="white", font=("Helvetica", 11), padx=10, pady=5)
         self.btn_lapor.pack(pady=5)
 
-        self.btn_tampilkan = tk.Button(self.root, text="Tampilkan Laporan", command=self.tampilkan_laporan,
-                                       bg="#28a745", fg="white", font=("Helvetica", 11), padx=10, pady=5)
+        self.btn_tampilkan = tk.Button(self.root, text="Tampilkan Laporan", command=self.tampilkan_laporan, bg="#28a745", fg="white", font=("Helvetica", 11), padx=10, pady=5)
         self.btn_tampilkan.pack(pady=5)
 
-        self.btn_ditemukan = tk.Button(self.root, text="Tandai Ditemukan", command=self.tandai_ditemukan,
-                                       bg="#ffc107", fg="black", font=("Helvetica", 11), padx=10, pady=5)
-        self.btn_ditemukan.pack(pady=5)
 
         self.list_laporan = tk.Listbox(self.root, width=60, height=12, font=("Courier", 10))
         self.list_laporan.pack(pady=10)
-
+        
+        self.btn_ditemukan = tk.Button(self.root, text="Tandai Ditemukan", command=self.tandai_ditemukan, bg="#ffc107", fg="black", font=("Helvetica", 11), padx=10, pady=5)
+        self.btn_ditemukan.pack(pady=5)
+        
     def lapor_barang(self):
         nama = self.entry_pelapor.get()
         jenis = self.entry_jenis.get()
